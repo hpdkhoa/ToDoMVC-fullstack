@@ -1,0 +1,44 @@
+{
+  "name": "todomvc-fullstack",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "classnames": "^2.1.5",
+    "del": "^5.1.0",
+    "director": "^1.2.0",
+    "express": "^4.17.1",
+    "psi": "^4.0.1",
+    "react": "^0.13.3",
+    "run-sequence": "^2.2.1",
+    "todomvc-app-css": "^2.0.0",
+    "todomvc-common": "^1.0.1"
+  },
+  "devDependencies": {
+    "bin-up": "^1.1.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^1.0.1",
+    "gulp-cache": "^0.2.0",
+    "gulp-if": "^1.2.1",
+    "gulp-imagemin": "3.0.0",
+    "gulp-jshint": "^1.6.3",
+    "gulp-load-plugins": "^0.7.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-replace": "^0.4.0",
+    "gulp-size": "^1.0.0",
+    "gulp-uncss": "^0.5.0",
+    "gulp-useref": "^1.0.2",
+    "gulp-vulcanize": "^1.0.0"
+  },
+  "scripts": {
+    "cy:open": "bin-up cypress open --project ../.. --env framework=react",
+    "cy:run": "bin-up cypress run --project ../.. --env framework=react",
+    "cy:run:record": "npm run cy:run -- --record",
+    "start": "bin-up gulp test-server",
+    "test:gui": "bin-up run-p --race start cy:open",
+    "test": "bin-up run-p --race start cy:run",
+    "test:record": "bin-up run-p --race start cy:run:record"
+  }
+}
