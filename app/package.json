@@ -9,7 +9,7 @@
     "classnames": "^2.1.5",
     "del": "^5.1.0",
     "director": "^1.2.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "psi": "^4.0.1",
     "react": "^0.13.3",
     "run-sequence": "^2.2.1",
